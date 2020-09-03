@@ -17,9 +17,10 @@ const HeaderNav = () => {
 
         <PrincipalNavigation  >
           <Items>
-            <Menu.Item>Fundas para celular </Menu.Item>
-            <Menu.Item>Tazas</Menu.Item>
-            <Menu.Item>Playeras</Menu.Item>
+            <Menu.Item><Link to="/fundas">Fundas para celular </Link></Menu.Item>
+            <Menu.Item><Link to="/tazas">Tazas</Link></Menu.Item>
+            <Menu.Item><Link to="/playeras">Playeras</Link></Menu.Item>
+            <Menu.Item><Link to="/crealo-tu-mismo">Crealo tu mismo</Link></Menu.Item>
           </Items>
           <Badge count={1}>
             <ShoppingOutlined

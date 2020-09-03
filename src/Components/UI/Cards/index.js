@@ -1,23 +1,30 @@
 import React from 'react';
-import {ProductCard, Button} from './styles'
+import { ProductCard, Button, Image } from './styles'
+import { colors } from '../../../helpers';
+import PropTypes from 'prop-types';
 
-const ProductsCard= () => {
+const ProductsCard = ({ product, agregarProducto }) => {
+
+
     return (
         <ProductCard
+            background={colors(product.type)}
             cover={
-                <img
+                <Image
                     alt="example"
-                    src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+                    src={product.url}
                 />
             }
-            actions={[
-                <Button>Agregar</Button>
-              ]}
-            
-            >
+        >
+            <Button onClick={agregarProducto}>Agregar</Button>
 
         </ProductCard>
     );
+}
+
+ProductCard.propTypes = {
+    product: PropTypes.string,
+    agregarProducto: PropTypes.func
 }
 
 export default ProductsCard;
