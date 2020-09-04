@@ -1,23 +1,23 @@
 import React from 'react'
-import products from '../../../db.json'
-import Card from '../../../Components/UI/Cards'
-import { CardContent } from './styles'
+import products from '../../db.json'
+import Card from '../../Components/UI/ProductCard'
+import { Content } from './styles'
 import { Layout } from 'antd'
 
 const Phone = () => {
   return (
     <Layout>
-      <CardContent>
+      <Content>
         {
           products
             .filter(prod => prod.type === 'phone')
-            .map(product => {
+            .map(phone => {
               return (
-                <Card product={product} key={product.id} />
+                <Card product={phone} key={phone.id} />
               )
             })
         }
-      </CardContent>
+      </Content>
     </Layout>
   )
 }

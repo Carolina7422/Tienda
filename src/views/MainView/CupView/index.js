@@ -1,27 +1,26 @@
-import React from 'react';
+import React from 'react'
 import products from '../../../db.json'
-import Card from '../../../Components/UI/Cards'
+import ProductCard from '../../../Components/UI/ProductCard'
 import { CardContent } from './styles'
 import { Layout } from 'antd'
 
 const CupView = () => {
-    return (
+  return (
 
-        <Layout>
-            <CardContent>
-                {
-                    products
-                        .filter(prod => prod.type === "cup")
-                        .map(product => {
-
-                            return (
-                                <Card product={product} key={product.id} />
-                            )
-                        })
-                }
-            </CardContent>
-        </Layout>
-    );
+    <Layout>
+      <CardContent>
+        {
+          products
+            .filter(prod => prod.type === 'cup')
+            .map(product => {
+              return (
+                <ProductCard product={product} key={product.id} />
+              )
+            })
+        }
+      </CardContent>
+    </Layout>
+  )
 }
 
-export default CupView;
+export default CupView

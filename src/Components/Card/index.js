@@ -1,10 +1,8 @@
 import React from 'react'
 import { Container, Button, Image } from './styles'
-import PropTypes from 'prop-types';
-
+import PropTypes from 'prop-types'
 
 const Card = (props) => {
-
   const {
     title = 'Sin Información',
     subtitle = '-'
@@ -27,8 +25,8 @@ const Card = (props) => {
 }
 
 Card.propTypes = {
-  title: PropTypes.string
+  title: PropTypes.string,
+  subtitle: PropTypes.string
 }
 
 export default Card
-

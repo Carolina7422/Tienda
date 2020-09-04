@@ -1,8 +1,7 @@
 import { Card } from 'antd'
 import styled from 'styled-components'
 
-
-export const ProductCard =  styled(Card)`
+export const Container = styled(Card)`
     margin:30px 20px;
     padding-top:20px;
     width:400px;

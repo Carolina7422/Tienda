@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../Components/UI/Cards/index'
+import ProductCard from '../../Components/UI/ProductCard'
 import { CardContent } from './styles'
 import { Layout } from 'antd'
 import products from '../../db.json'
@@ -11,7 +11,7 @@ const MainView = () => {
         {
           products.map((product, index) => {
             return (
-              <Card key={index} product={product}/>
+              <ProductCard key={index} product={product}/>
             )
           })
         }
