@@ -2,10 +2,10 @@ import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './Components/UI/Header'
 // import MainView from './views/MainView/'
-import CupView from './Views/MainView/CupView'
+import CupView from './Views/CupView'
 import PhoneProduct from './Views/PhoneProducts'
-import TshirtView from './Views/MainView/TshirtView'
-import CreateItYourself from './Views/MainView/CreateItYourself'
+import TshirtView from './Views/TshirtView'
+import CreateItYourself from './Views/CreateItYourself'
 import './main.css'
 
 function App() {

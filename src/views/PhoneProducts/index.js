@@ -1,6 +1,6 @@
 import React from 'react'
 import products from '../../db.json'
-import Card from '../../Components/UI/ProductCard'
+import Card from '../../Components/ProductCard'
 import { Content } from './styles'
 import { Layout } from 'antd'
 

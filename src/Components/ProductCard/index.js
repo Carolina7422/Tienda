@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Button, Image } from './styles'
-import { colors } from '../../../helpers'
+import { colors } from '../../helpers'
 import PropTypes from 'prop-types'
 
 // cambiar agregarProducto por handleClick

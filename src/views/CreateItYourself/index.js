@@ -1,5 +1,5 @@
 import React from 'react';
-import ContainerCatsOption from '../../../Components/UI/ContainerCatsOpction'
+import ContainerCatsOption from '../../Components/ContainerCatsOpction'
 
 const CreateItYourself = () => {
   return (
