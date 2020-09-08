@@ -1,16 +1,12 @@
 import React from 'react'
-import { Container, ContentImage } from './styles'
+import { Container, ContentImage, Image } from './styles'
 // import PropTypes from 'prop-types'
 
-const Images = () => {
+const Images = ({ img }) => {
   return (
-    <Container>
-      <h1>Elige una imagen</h1>
       <ContentImage>
-        <h1>imagenes </h1>
+        <Image width="100px" src={img.url}/>
       </ContentImage>
-
-    </Container>
 
   )
 }

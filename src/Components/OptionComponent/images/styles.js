@@ -14,5 +14,7 @@ flex-direction:column;
 export const ContentImage = styled.div`
 padding:3px;
 display:flex;
-flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+
 `

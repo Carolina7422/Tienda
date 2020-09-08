@@ -6,28 +6,21 @@ import CupView from './Views/CupView'
 import PhoneProduct from './Views/PhoneProducts'
 import TshirtView from './Views/TshirtView'
 import CreateItYourself from './Views/CreateItYourself'
-import ImagesProvider from './context/imagesContext'
+
 import './main.css'
 
 function App () {
   return (
-
     <Router>
-
-      <Header />
+    <Header />
       <Switch>
         <Route exact path="/" component={MainView} />
         <Route exact path="/fundas" component={PhoneProduct} />
         <Route exact path="/playeras" component={TshirtView} />
         <Route exact path="/tazas" component={CupView} />
-        <Route exact path="/crealo-tu-mismo">
-          <ImagesProvider>
-            <CreateItYourself/>
-          </ImagesProvider>
-        </Route>
+        <Route exact path="/crealo-tu-mismo" component={CreateItYourself}/>
       </Switch>
     </Router>
-
   )
 }
 
