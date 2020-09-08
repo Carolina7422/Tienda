@@ -1,13 +1,12 @@
-import styled from 'styled-components';
-import { Layout } from 'antd';
+import styled from 'styled-components'
+import { Layout } from 'antd'
 
-const { Header } = Layout;
+const { Header } = Layout
 
 export const Navbar = styled(Header)`
   background: transparent;
   display:flex;
   justify-content:space-between;
-  padding:0px 100px;
   height:100px;
   align-items:center;
   max-width:100%;
@@ -41,5 +40,3 @@ export const Logo = styled.div`
     }
 
 `
-
-

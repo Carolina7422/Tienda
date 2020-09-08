@@ -5,17 +5,17 @@ import Items from './items/index'
 import { Menu, Layout, Badge } from 'antd'
 import { Link } from 'react-router-dom'
 
-
-
 const HeaderNav = () => {
   return (
     <Layout>
       <Navbar>
         <Logo>
-          <h1>S</h1>
+          <Link to="/">
+            <h1>S</h1>
+          </Link>
         </Logo>
 
-        <PrincipalNavigation  >
+        <PrincipalNavigation>
           <Items>
             <Menu.Item><Link to="/fundas">Fundas para celular </Link></Menu.Item>
             <Menu.Item><Link to="/tazas">Tazas</Link></Menu.Item>
@@ -24,7 +24,7 @@ const HeaderNav = () => {
           </Items>
           <Badge count={1}>
             <ShoppingOutlined
-              style={{ fontSize: 30}} />
+              style={{ fontSize: 30 }} />
 
           </Badge>
         </PrincipalNavigation >
@@ -32,7 +32,7 @@ const HeaderNav = () => {
       </Navbar>
     </Layout>
 
-  );
+  )
 }
 
-export default HeaderNav;
+export default HeaderNav

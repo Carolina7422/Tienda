@@ -1,78 +1,95 @@
-
-    [
-        {
-            "type": "cup",
-            "price": "500",
-            "id": 1,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup1.png?alt=media&token=00fb240f-61df-4c5f-a0fe-3864c345aaaf"
-        },
-        {
-            "type": "cup",
-            "price": 100,
-            "id": 2,
-            "url":"https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup2.png?alt=media&token=a8964304-4775-4808-ab2a-33c96f64c6fa"
-        },
-        {
-            "type": "cup",
-            "price": 2,
-            "id": 3,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup3.png?alt=media&token=0b9ae962-008a-4a68-81bc-ea405faaeba5"
-        },
-        {
-            "type": "cup",
-            "price": "500",
-            "id": 4,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup4.png?alt=media&token=572006bf-cc62-4aca-ba62-9205f479d704"
-        },
-        {
-            "type": "tshirt",
-            "price": 100,
-            "id": 5,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fshirt1.png?alt=media&token=47575861-00df-4ea6-b0aa-ab5936cae666"
-        },
-        {
-            "type": "tshirt",
-            "price": 2,
-            "id": 6,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fshirt2.png?alt=media&token=35af92d9-76ce-4026-90ae-ff41d51eee81"
-        },
-        {
-            "type": "tshirt",
-            "price": "500",
-            "id": 7,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fshirt3.png?alt=media&token=4c298d5c-f5d9-4b99-9fc3-64f5d1ba53b5"
-        },
-        {
-            "type": "phone",
-            "price": 2,
-            "id": 9,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone1.png?alt=media&token=e89981a5-00c5-4149-86e5-b7154fc5533a"
-        },
-        {
-            "type": "phone",
-            "price": "500",
-            "id": 10,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone2.png?alt=media&token=2b28116b-bbb4-4406-8c56-586b2674a77d"
-        },
-        {
-            "type": "phone",
-            "price": 100,
-            "id": 11,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone3.png?alt=media&token=2d50f8ab-b76b-43fc-8c30-09c658340321"
-        },
-        {
-            "type": "phone",
-            "price": 2,
-            "id": 12,
-            "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone4.png?alt=media&token=f20effcf-08cc-45b9-9336-669e2160e243"
-        },
-        {
-            "type": "phone",
-            "price": "500",
-            "id": 13,
-            "url":"https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone3.png?alt=media&token=2d50f8ab-b76b-43fc-8c30-09c658340321"
-        }
+[
+    {
+        "type": "cup",
+        "price": "$ 100.00",
+        "id": 1,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup1.png?alt=media&token=00fb240f-61df-4c5f-a0fe-3864c345aaaf",
+        "ofert": true,
+        "newPrice": "$ 80.00"
+    },
+    {
+        "type": "cup",
+        "price": "$ 120.00",
+        "id": 2,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup2.png?alt=media&token=a8964304-4775-4808-ab2a-33c96f64c6fa",
+        "ofert": true,
+        "newPrice": "$ 90.00"
+    },
+    {
+        "type": "cup",
+        "price": "$ 145.00",
+        "id": 3,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup3.png?alt=media&token=0b9ae962-008a-4a68-81bc-ea405faaeba5",
+        "isOfert": false
+    },
+    {
+        "type": "cup",
+        "price": "$ 190.00",
+        "id": 4,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fcup4.png?alt=media&token=572006bf-cc62-4aca-ba62-9205f479d704",
+        "ofert": false
         
-    ]
-
-
+    },
+    {
+        "type": "tshirt",
+        "price": "$ 134.00",
+        "id": 5,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fshirt1.png?alt=media&token=47575861-00df-4ea6-b0aa-ab5936cae666",
+        "ofert": true,
+        "newPrice": "$ 99.00"
+    },
+    {
+        "type": "tshirt",
+        "price": "$ 120.00",
+        "id": 6,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fshirt2.png?alt=media&token=35af92d9-76ce-4026-90ae-ff41d51eee81",
+        "ofert": false
+    },
+    {
+        "type": "tshirt",
+        "price": "$ 112.00", 
+        "id": 7,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fshirt3.png?alt=media&token=4c298d5c-f5d9-4b99-9fc3-64f5d1ba53b5",
+        "ofert": true,
+        "newPrice": "$ 95.00"
+    },
+    {
+        "type": "phone",
+        "price": "$ 85.00",
+        "id": 9,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone1.png?alt=media&token=e89981a5-00c5-4149-86e5-b7154fc5533a",
+        "ofert": true,
+        "newPrice": "$ 42.50"
+    },
+    {
+        "type": "phone",
+        "price": "$ 80.00",
+        "id": 10,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone2.png?alt=media&token=2b28116b-bbb4-4406-8c56-586b2674a77d",
+        "ofert": true,
+        "newPrice": "$ 50.00"
+    },
+    {
+        "type": "phone",
+        "price": "$ 50.00",
+        "id": 11,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone3.png?alt=media&token=2d50f8ab-b76b-43fc-8c30-09c658340321",
+        "ofert": false
+    },
+    {
+        "type": "phone",
+        "price": "$ 75.00",
+        "id": 12,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone4.png?alt=media&token=f20effcf-08cc-45b9-9336-669e2160e243",
+        "ofert": true,
+        "newPrice": "$ 50.00"
+    },
+    {
+        "type": "phone",
+        "price": "$ 50.00",
+        "id": 13,
+        "url": "https://firebasestorage.googleapis.com/v0/b/fitclubframework.appspot.com/o/img%2Fphone3.png?alt=media&token=2d50f8ab-b76b-43fc-8c30-09c658340321",
+        "ofert": false
+        
+    }
+]

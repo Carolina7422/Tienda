@@ -1,14 +1,14 @@
 import React from 'react'
 import products from '../../db.json'
 import ProductCard from '../../Components/ProductCard'
-import { CardContent } from './styles'
+import { Content } from './styles'
 import { Layout } from 'antd'
 
 const CupView = () => {
   return (
 
     <Layout>
-      <CardContent>
+      <Content>
         {
           products
             .filter(prod => prod.type === 'cup')
@@ -18,7 +18,7 @@ const CupView = () => {
               )
             })
         }
-      </CardContent>
+      </Content>
     </Layout>
   )
 }

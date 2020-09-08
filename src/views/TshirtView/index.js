@@ -1,13 +1,13 @@
 import React from 'react'
 import products from '../../db.json'
 import ProductCard from '../../Components/ProductCard'
-import { CardContent } from './styles'
+import { Content } from './styles'
 import { Layout } from 'antd'
 
 const TshirtView = () => {
   return (
     <Layout>
-      <CardContent>
+      <Content>
         {
           products
             .filter(prod => prod.type === 'tshirt')
@@ -17,7 +17,7 @@ const TshirtView = () => {
               )
             })
         }
-      </CardContent>
+      </Content>
     </Layout>
   )
 }

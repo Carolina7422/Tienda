@@ -5,7 +5,7 @@ export const Container = styled(Card)`
     margin:30px 20px;
     padding-top:20px;
     width:400px;
-    height:450px;
+    height:460px;
     background: ${props => props.background};
 
 `
@@ -14,6 +14,7 @@ export const Button = styled.button`
     background:#1da57a;
     width:100%;
     height:50px;
+    margin-top:1em;
     color:white;
     border: white;
     outline:none;
@@ -25,8 +26,16 @@ export const Button = styled.button`
 `
 
 export const Image = styled.img`
-width: 300px;
-height:300px;
-margin: auto;
+    width: 300px;
+    height:300px;
+    margin: auto;
 
+`
+
+export const Price = styled.h3`
+    color:${props => props.color};
+    text-decoration:${props => props.decoration};
+    display:inline;
+    margin-left: 1em;
+    text-align:center;
 `

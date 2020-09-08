@@ -1,10 +1,25 @@
-import React from 'react';
-import ContainerCatsOption from '../../Components/ContainerCatsOpction'
+import React from 'react'
+import { Row, Col } from 'antd'
+// import { Container } from './styles'
+// import OptionComponent from '../../Components/OptionComponent'
+import EditImage from '../../Components/OptionComponent/EditImage'
+// import ImagesContext from '../../context/imagesContext'
+import Images from '../../Components/OptionComponent/images'
 
-const CreateItYourself = () => {
+const CreateYourSelft = () => {
   return (
-    <ContainerCatsOption />
-  );
+    <>
+      <Row>
+        <Col xs={24} md={12}>
+          <EditImage />
+        </Col>
+        <Col xs={24} md={12}>
+          <Images/>
+        </Col>
+      </Row>
+
+    </>
+  )
 }
 
-export default CreateItYourself;
+export default CreateYourSelft

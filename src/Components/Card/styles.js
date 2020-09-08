@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 200px;
@@ -20,5 +20,3 @@ export const Image = styled.img`
   height: 140px;
   background-color: grey;
 `
-
-

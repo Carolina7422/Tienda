@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Layout, Menu, Breadcrumb } from 'antd';
+import { Layout, Menu, Breadcrumb } from 'antd'
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content, Footer } = Layout
 
+// eslint-disable-next-line react/prop-types
 const MainLayout = ({ children }) => {
-
   return (
     <Layout className="layout">
       <Header>
@@ -26,7 +26,7 @@ const MainLayout = ({ children }) => {
       </Content>
       <Footer style={{ textAlign: 'center' }}> Cat Shop</Footer>
     </Layout>
-  );
+  )
 }
 
-export default MainLayout;
+export default MainLayout

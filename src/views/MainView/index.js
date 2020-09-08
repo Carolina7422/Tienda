@@ -1,21 +1,18 @@
 import React from 'react'
-import ProductCard from '../../Components/UI/ProductCard'
-import { CardContent } from './styles'
-import { Layout } from 'antd'
-import products from '../../db.json'
+import { Layout, Carousel } from 'antd'
+import { Content } from './styles'
 
 const MainView = () => {
   return (
     <Layout>
-      <CardContent>
-        {
-          products.map((product, index) => {
-            return (
-              <ProductCard key={index} product={product}/>
-            )
-          })
-        }
-      </CardContent>
+      <Carousel autoplay>
+        <Content>
+          <img src={require('../../assets/img/special-offer.png')} alt="imagen"/>
+        </Content>
+        <Content>
+          <img src={require('../../assets/img/t-shirt.jpg')} alt="imagen"/>
+        </Content>
+      </Carousel>
     </Layout>
 
   )
