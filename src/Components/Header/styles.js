@@ -9,8 +9,9 @@ export const Navbar = styled(Header)`
   justify-content:space-between;
   height:100px;
   align-items:center;
-  max-width:100%;
+  width:100%;
 
+  
 `
 
 export const PrincipalNavigation = styled.nav`
@@ -37,6 +38,17 @@ export const Logo = styled.div`
       position:absolute;
       top:10px;
       left:17px;
-    }
+    };
 
 `
+
+export const Container = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:200px
+  
+
+`
+
+
