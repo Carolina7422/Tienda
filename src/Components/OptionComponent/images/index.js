@@ -1,14 +1,33 @@
 import React from 'react'
-import { Container, ContentImage, Image } from './styles'
-// import PropTypes from 'prop-types'
 
-const Images = ({ img }) => {
+function Image(props) {
+
+const dragStart = e =>{
+  const target = e.target;
+
+  e.dataTransfer.setData('card_id', target.id);
+
+  setTimeout(() => {
+    target.style.display ="none";
+
+  }, 0)
+} 
+
+const dragOver = e => {
+  e.stopPropagation();
+}
+
   return (
-      <ContentImage>
-        <Image width="100px" src={img.url}/>
-      </ContentImage>
-
+    <img
+      id={props.id}
+      draggable={props.draggable}
+      onDragStart={dragStart}
+      onDragOver={dragOver}
+    />
+ 
+   
   )
 }
 
-export default Images
+export default Image
+

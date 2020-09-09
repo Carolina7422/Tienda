@@ -1,9 +1,8 @@
 import styled from 'styled-components'
 
-export const Image = styled.div`
-   background:grey;
-   width:90%;
-   height: 400px;
+export const Image = styled.canvas`
+   border:1px solid #d3d3d3;
+  
 `
 
 export const Container = styled.div`
@@ -16,7 +15,7 @@ flex-direction:column;
 `
 export const Button = styled.button`
    background:#1da57a;
-   width:80%;
+   width:50%;
    height:50px;
    margin-top:1em;
    color:white;

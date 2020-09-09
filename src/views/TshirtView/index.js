@@ -1,19 +1,28 @@
-import React from 'react'
-import products from '../../db.json'
+import React, { useContext } from 'react'
 import ProductCard from '../../Components/ProductCard'
 import { Content } from './styles'
 import { Layout } from 'antd'
+import { MainContext } from '../../context'
 
 const TshirtView = () => {
+
+  const { products, cart, setCart } = useContext(MainContext)
+
   return (
     <Layout>
       <Content>
         {
           products
             .filter(prod => prod.type === 'tshirt')
-            .map(product => {
+            .map(tshirt => {
               return (
-                <ProductCard product={product} key={product.id} />
+                <ProductCard 
+                product={tshirt} 
+                cart={cart}
+                products={products}
+                key={tshirt.id}
+                setCart={setCart} 
+                />
               )
             })
         }

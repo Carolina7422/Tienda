@@ -1,10 +1,12 @@
-import React from 'react'
-import products from '../../db.json'
-import Card from '../../Components/ProductCard'
+import React, { useContext }  from 'react'
+import ProductCard from '../../Components/ProductCard'
+import { MainContext } from '../../context'
 import { Content } from './styles'
 import { Layout } from 'antd'
 
 const Phone = () => {
+  const { products, cart, setCart } = useContext(MainContext)
+
   return (
     <Layout>
       <Content>
@@ -13,7 +15,13 @@ const Phone = () => {
             .filter(prod => prod.type === 'phone')
             .map(phone => {
               return (
-                <Card product={phone} key={phone.id} />
+                <ProductCard 
+                product={phone} 
+                cart={cart}
+                products={products}
+                key={phone.id}
+                setCart={setCart} 
+                />
               )
             })
         }

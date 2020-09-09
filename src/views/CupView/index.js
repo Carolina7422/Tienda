@@ -1,10 +1,13 @@
-import React from 'react'
-import products from '../../db.json'
+import React, { useContext } from 'react'
 import ProductCard from '../../Components/ProductCard'
+import { MainContext } from '../../context'
 import { Content } from './styles'
 import { Layout } from 'antd'
 
 const CupView = () => {
+  
+const {products, cart, setCart} = useContext(MainContext)
+console.log(products)
   return (
 
     <Layout>
@@ -14,11 +17,19 @@ const CupView = () => {
             .filter(prod => prod.type === 'cup')
             .map(product => {
               return (
-                <ProductCard product={product} key={product.id} />
+                <ProductCard 
+                product={product} 
+                cart={cart}
+                products={products}
+                key={product.id}
+                setCart={setCart} 
+                />
               )
             })
         }
+     
       </Content>
+    
     </Layout>
   )
 }

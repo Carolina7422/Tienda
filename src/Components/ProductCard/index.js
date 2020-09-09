@@ -2,38 +2,52 @@ import React from 'react'
 import { Container, Button, Image, Price } from './styles'
 import { colors } from '../../helpers'
 import PropTypes from 'prop-types'
+import { Layout } from 'antd'
 
 // cambiar agregarProducto por handleClick
-const ProductCard = ({ product, handleClick }) => {
+const ProductCard = ({ product, cart, setCart, products}) => {
+
+  const {type, url, price, newPrice, ofert, id}  = product
+  
+
+  const handleClick = id => {
+     const product = products.filter(prod=> prod.id === id)[0]
+  setCart([
+    ...cart,
+    product
+  ])
+ 
+  }
+
   const renderOfertPrice = () => {
     return (
       <>
-        <Price color="grey" decoration="line-through">{product.price}</Price>
-        <Price color="red">{product.newPrice}</Price>
+        <Price color="grey" decoration="line-through">${price}.00</Price>
+        <Price color="red">${newPrice}.00</Price>
       </>
     )
   }
 
+
   return (
     <Container
-      background={colors(product.type)}
+      background={colors(type)}
       cover={
         <Image
           alt="example"
-          src={product.url}
+          src={url}
         />
       }
     >
       {
-        !product.ofert ? <Price color="black">{product.price}</Price> : renderOfertPrice()
+        !ofert ? <Price color="black">${price}.00</Price> : renderOfertPrice()
       }
 
-      <Button onClick={handleClick}>Agregar al carrito</Button>
+      <Button onClick={() => handleClick(id)}>Agregar al carrito</Button>
 
     </Container>
   )
 }
-
 ProductCard.propTypes = {
   product: PropTypes.shape({
     type: PropTypes.string,

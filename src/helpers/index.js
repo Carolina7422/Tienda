@@ -1,3 +1,4 @@
+import { FilterFilled } from "@ant-design/icons"
 
 export const colors = (type) => {
   let bg
@@ -16,4 +17,12 @@ export const colors = (type) => {
       bg = 'white'
   }
   return (bg)
+}
+
+
+
+export const total = (obj) => {
+  const getArrayPrice = obj.map(price => price.ofert ? price.newPrice : price.price);
+  return getArrayPrice.reduce((total, amount) => total + amount)
+
 }
