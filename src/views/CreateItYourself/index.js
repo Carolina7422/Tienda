@@ -15,7 +15,9 @@ const CreateYourSelft = () => {
 
       <Row>
         <Col xs={24} md={12}>
-          <EditImage/>
+          <EditImage id="target"
+         
+          />
         </Col>
         <Col xs={24} md={12}>
           <Row justify="center" align="bottom" >
@@ -26,13 +28,14 @@ const CreateYourSelft = () => {
           {
             data.map(e => {
               return(
-              <p key={e.id}>{e.id}</p>
+              <Images
+               id={e.id}
+              draggable="true" src={e.url} key={e.id}/>
               )
             } )
           }
         </Container>
   
-        <div id="vison"></div>
           </Col>
           </Row>
         </Col>

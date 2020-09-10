@@ -18,12 +18,20 @@ const dragOver = e => {
 }
 
   return (
+    <div
+    style={{ border: "1px solid black", 
+    margin: "0em",
+    padding: "2em" }}
+    >
     <img
+      width="100px"
+      src={props.src}
       id={props.id}
       draggable={props.draggable}
       onDragStart={dragStart}
       onDragOver={dragOver}
     />
+    </div>
  
    
   )
