@@ -1,7 +1,5 @@
-import { Menu } from 'antd';
-import styled from 'styled-components';
-
-
+import { Menu } from 'antd'
+import styled from 'styled-components'
 
 export const MenuTag = styled(Menu)`
     background:transparent;
@@ -11,5 +9,4 @@ export const MenuTag = styled(Menu)`
     color:black;
     font-size:20px;
     font-weight: 600
-
 `

@@ -1,4 +1,4 @@
-import React, { useContext }  from 'react'
+import React, { useContext } from 'react'
 import ProductCard from '../../Components/ProductCard'
 import { MainContext } from '../../context'
 import { Content } from './styles'
@@ -15,12 +15,12 @@ const Phone = () => {
             .filter(prod => prod.type === 'phone')
             .map(phone => {
               return (
-                <ProductCard 
-                product={phone} 
-                cart={cart}
-                products={products}
-                key={phone.id}
-                setCart={setCart} 
+                <ProductCard
+                  product={phone}
+                  cart={cart}
+                  products={products}
+                  key={phone.id}
+                  setCart={setCart}
                 />
               )
             })

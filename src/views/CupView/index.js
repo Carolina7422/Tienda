@@ -5,9 +5,8 @@ import { Content } from './styles'
 import { Layout } from 'antd'
 
 const CupView = () => {
-  
-const {products, cart, setCart} = useContext(MainContext)
-console.log(products)
+  const { products, cart, setCart } = useContext(MainContext)
+  console.log(products)
   return (
 
     <Layout>
@@ -17,19 +16,19 @@ console.log(products)
             .filter(prod => prod.type === 'cup')
             .map(product => {
               return (
-                <ProductCard 
-                product={product} 
-                cart={cart}
-                products={products}
-                key={product.id}
-                setCart={setCart} 
+                <ProductCard
+                  product={product}
+                  cart={cart}
+                  products={products}
+                  key={product.id}
+                  setCart={setCart}
                 />
               )
             })
         }
-     
+
       </Content>
-    
+
     </Layout>
   )
 }

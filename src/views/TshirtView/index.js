@@ -5,7 +5,6 @@ import { Layout } from 'antd'
 import { MainContext } from '../../context'
 
 const TshirtView = () => {
-
   const { products, cart, setCart } = useContext(MainContext)
 
   return (
@@ -16,12 +15,12 @@ const TshirtView = () => {
             .filter(prod => prod.type === 'tshirt')
             .map(tshirt => {
               return (
-                <ProductCard 
-                product={tshirt} 
-                cart={cart}
-                products={products}
-                key={tshirt.id}
-                setCart={setCart} 
+                <ProductCard
+                  product={tshirt}
+                  cart={cart}
+                  products={products}
+                  key={tshirt.id}
+                  setCart={setCart}
                 />
               )
             })

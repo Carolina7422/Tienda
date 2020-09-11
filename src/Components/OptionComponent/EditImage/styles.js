@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Image = styled.canvas`
    border:1px solid #d3d3d3;
-  
 `
 
 export const Container = styled.div`

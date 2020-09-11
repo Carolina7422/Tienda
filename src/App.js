@@ -12,20 +12,20 @@ import './main.css'
 
 function App () {
   return (
-      <MainProvider>
+    <MainProvider>
       <ImagesProvider>
-      <Router>
-      <Header/>
-        <Switch>
-          <Route exact path="/" component={MainView} />
-          <Route exact path="/fundas" component={PhoneProduct} />
-          <Route exact path="/playeras" component={TshirtView} />
-          <Route exact path="/tazas" component={CupView} />
-          <Route exact path="/crealo-tu-mismo" component={CreateItYourself}/>
-        </Switch>
-      </Router>
+        <Router>
+          <Header/>
+          <Switch>
+            <Route exact path="/" component={MainView} />
+            <Route exact path="/fundas" component={PhoneProduct} />
+            <Route exact path="/playeras" component={TshirtView} />
+            <Route exact path="/tazas" component={CupView} />
+            <Route exact path="/crealo-tu-mismo" component={CreateItYourself}/>
+          </Switch>
+        </Router>
       </ImagesProvider>
-      </MainProvider>
+    </MainProvider>
   )
 }
 

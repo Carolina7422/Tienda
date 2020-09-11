@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col } from 'antd'
-import Images from './images'
+import Images from './draggableImage'
 import EditImage from './EditImage'
 
 const OptionComponent = () => {

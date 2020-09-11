@@ -1,29 +1,32 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState } from 'react'
 import data from '../db.json'
+import PropTypes from 'prop-types'
 
 export const MainContext = createContext()
 
-const MainProvider = ({children}) => {
-
+const MainProvider = ({ children }) => {
   const [products, setProduct] = useState(data)
-// shopping cart state
-  const [cart, setCart] = useState([]);
-  const [count, setCount] = useState("8")
+  // shopping cart state
+  const [cart, setCart] = useState([])
 
-  return(
+  return (
 
-  <MainContext.Provider 
-    value={{
-      products,
-      cart,
-      setCart,
-      count,
-      setCount
-    }}
-  >
+    <MainContext.Provider
+      value={{
+        products,
+        cart,
+        setCart,
+        setProduct
+      }}
+    >
       {children}
 
-  </MainContext.Provider>
+    </MainContext.Provider>
   )
-} 
+}
+
+MainProvider.propTypes = {
+  children: PropTypes.any
+}
+
 export default MainProvider

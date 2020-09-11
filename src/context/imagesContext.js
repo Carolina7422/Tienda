@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect} from 'react'
+import React, { createContext, useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 export const ImagesContext = createContext()
@@ -19,7 +19,6 @@ const ImagesProvider = (props) => {
     <ImagesContext.Provider value={{
       data
     }}>
-    
       {props.children}
     </ImagesContext.Provider>
 
