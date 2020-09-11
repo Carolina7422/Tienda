@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Image } from './styles'
 import PropTypes from 'prop-types'
 
 const EditImage = ({ id }) => {
+  const canvas = useRef(null)
   useEffect(() => {
     const selectImage = () => {
-      const c = document.getElementById('canvas')
+      const c = canvas.current
       const ctx = c.getContext('2d')
       const img = document.getElementById('scream')
       ctx.drawImage(img, 50, -60)
-      img.style.display = 'none'
     }
     selectImage()
   })
@@ -19,9 +19,9 @@ const EditImage = ({ id }) => {
     const cardId = e.dataTransfer.getData('card_id')
 
     const card = document.getElementById(cardId)
-    card.style.display = 'block'
-
-    e.target.appendChild(card)
+    const c = canvas.current
+    const ctx = c.getContext('2d')
+    ctx.drawImage(card, 0, 0, 150, 150)
   }
 
   const dragOver = e => {
@@ -30,12 +30,9 @@ const EditImage = ({ id }) => {
   return (
 
     <div style={{ position: 'relative', justifyContent: 'center', alignItems: 'center' }}>
-      <img id="scream" width="300px" src={require('../../../assets/img/playera-canvas.png')} />
-      <Image id="canvas" height="500px" width="500px"
-      >
-
-      </Image>
-      <div
+      <img id="scream" width="300px" style={{ display: 'none' }} src={require('../../../assets/img/playera-canvas.png')} />
+      <Image id="canvas" ref={canvas} height="500px" width="500px" onDrop={drop} onDragOver={dragOver} />
+      {/* <div
         id={id}
         onDrop={drop}
         onDragOver={dragOver}
@@ -49,8 +46,8 @@ const EditImage = ({ id }) => {
           width: 150
         }}
       >
-    Drop Zone
-      </div>
+        Drop Zone
+      </div> */}
     </div>
   )
 }

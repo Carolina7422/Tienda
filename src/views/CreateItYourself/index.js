@@ -13,9 +13,7 @@ const CreateYourSelft = () => {
 
     <Row>
       <Col xs={24} md={12}>
-        <EditImage id="target"
-
-        />
+        <EditImage id="canvas" />
       </Col>
       <Col xs={24} md={12}>
         <Row justify="center" align="bottom" >
@@ -28,9 +26,9 @@ const CreateYourSelft = () => {
                   return (
                     <Images
                       id={e.id}
-                      draggable="true"
+                      draggable={true}
                       src={e.url}
-                      key={e.id}/>
+                      key={e.id} />
                   )
                 })
               }

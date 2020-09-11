@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-function ImageDraggable ({ src, id, draggable }) {
+function ImageDraggable({ src, id, draggable }) {
   const dragStart = e => {
     const target = e.target
 
@@ -38,7 +38,7 @@ function ImageDraggable ({ src, id, draggable }) {
 
 ImageDraggable.propTypes = {
   id: PropTypes.string.isRequired,
-  draggable: PropTypes.func.isRequired,
+  draggable: PropTypes.bool.isRequired,
   src: PropTypes.any
 }
 
