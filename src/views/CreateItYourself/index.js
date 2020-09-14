@@ -1,27 +1,28 @@
 import React, { useContext } from 'react'
-import { Row, Col } from 'antd'
-import { Container } from './styles'
+import { Row, Col, Typography } from 'antd'
+import { Container, Spinner } from './styles'
 // import OptionComponent from '../../Components/OptionComponent'
-import EditImage from '../../Components/OptionComponent/EditImage'
+import EditImage from '../../Components/EditImage'
 import { ImagesContext } from '../../context/imagesContext'
-import Images from '../../Components/OptionComponent/draggableImage'
+import Images from '../../Components/draggableImage'
 
 const CreateYourSelft = () => {
-  const { data } = useContext(ImagesContext)
+  const { data, isLoading } = useContext(ImagesContext)
+
 
   return (
-
+  
     <Row>
       <Col xs={24} md={12}>
         <EditImage id="canvas" />
-      </Col>
-      <Col xs={24} md={12}>
-        <Row justify="center" align="bottom" >
-          <Col>
-            <h2>Elige una imagen</h2>
-            <Container >
 
+    </Col>
+        <Col xs={24} md={12}>
+          <Container >
+            <Typography.Title level={3} type="secondary">Elige una imagen</Typography.Title>
+            {isLoading && <Spinner/>}
               {
+              
                 data.map(e => {
                   return (
                     <Images
@@ -29,16 +30,13 @@ const CreateYourSelft = () => {
                       draggable={true}
                       src={e.url}
                       key={e.id} />
-                  )
+                )
                 })
+              
               }
             </Container>
-
           </Col>
         </Row>
-      </Col>
-    </Row>
-
   )
 }
 

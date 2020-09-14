@@ -8,6 +8,9 @@ const MainProvider = ({ children }) => {
   const [products, setProduct] = useState(data)
   // shopping cart state
   const [cart, setCart] = useState([])
+  const [EditProduct, setEditProduct] = useState([
+    
+  ]) 
 
   return (
 
@@ -16,7 +19,9 @@ const MainProvider = ({ children }) => {
         products,
         cart,
         setCart,
-        setProduct
+        setProduct,
+    
+      
       }}
     >
       {children}
@@ -25,8 +30,6 @@ const MainProvider = ({ children }) => {
   )
 }
 
-MainProvider.propTypes = {
-  children: PropTypes.any
-}
+
 
 export default MainProvider
