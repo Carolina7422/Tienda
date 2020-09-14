@@ -18,6 +18,8 @@ function ImageDraggable({ src, id, draggable }) {
 
   return (
     <Img
+        crossorigin="anonymous"
+        alt="image"
         src={src}
         id={id}
         draggable={draggable}

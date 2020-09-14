@@ -8,9 +8,11 @@ const MainProvider = ({ children }) => {
   const [products, setProduct] = useState(data)
   // shopping cart state
   const [cart, setCart] = useState([])
-  const [EditProduct, setEditProduct] = useState([
-    
-  ]) 
+  const [newProduct, setNewProduct] = useState({
+    img: "",
+    price: 0
+  }) 
+
 
   return (
 
@@ -20,7 +22,8 @@ const MainProvider = ({ children }) => {
         cart,
         setCart,
         setProduct,
-    
+        newProduct,
+        setNewProduct
       
       }}
     >

@@ -5,10 +5,11 @@ import { Container, Spinner } from './styles'
 import EditImage from '../../Components/EditImage'
 import { ImagesContext } from '../../context/imagesContext'
 import Images from '../../Components/draggableImage'
+import im from '../../assets/img/playera-canvas.png'
 
 const CreateYourSelft = () => {
   const { data, isLoading } = useContext(ImagesContext)
-
+  
 
   return (
   
