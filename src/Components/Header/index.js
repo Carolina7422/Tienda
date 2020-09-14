@@ -18,13 +18,13 @@ const HeaderNav = () => {
           ? cart.map(e => (
             <>
               <Container key={e.id}>
-                <img width="50px" src={e.url}/>
+                <img width="50px" src={e.url} alt="producto añadido"/>
                 <DeleteOutlined onClick={() => deleteElement(e.id)} style={{ fontSize: 20 }}/>
               </Container>
 
             </>
           ))
-          : <p>Tu carrito esta vacio</p>
+          : <p>Tu carrito esta vacío</p>
         }
         <h3>Total: ${cart.length && total(cart)}.00</h3>
       </div>
@@ -53,7 +53,7 @@ const HeaderNav = () => {
             <Menu.Item><Link to="/crealo-tu-mismo">Crealo tu mismo</Link></Menu.Item>
           </Items>
           <Badge count={cart.length}>
-            <Popover placement="bottomLeft" title="Añadidos" content={cartContent} trigger="click">
+            <Popover placement="bottomLeft" content={cartContent} trigger="click">
               <ShoppingOutlined
                 style={{ fontSize: 30 }} />
             </Popover>

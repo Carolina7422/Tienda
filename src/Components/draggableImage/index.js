@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Img } from './styles'
 function ImageDraggable({ src, id, draggable }) {
   const dragStart = e => {
     const target = e.target
@@ -16,22 +17,14 @@ function ImageDraggable({ src, id, draggable }) {
   }
 
   return (
-    <div
-      style={{
-        border: '1px solid black',
-        margin: '0em',
-        padding: '2em'
-      }}
-    >
-      <img
-        width="100px"
+    <Img
         src={src}
         id={id}
         draggable={draggable}
         onDragStart={dragStart}
         onDragOver={dragOver}
       />
-    </div>
+
 
   )
 }

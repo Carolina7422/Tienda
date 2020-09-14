@@ -5,19 +5,31 @@ export const ImagesContext = createContext()
 
 const ImagesProvider = (props) => {
   const [data, setData] = useState([])
+  const [isLoading, setLoading]= useState(false)
+  
 
-  console.log(data)
   useEffect(() => {
+
+   setLoading(true)
+
     fetch('https://api.thecatapi.com/v1/images/search?limit=5&page=10&order=Desc&mime_types=jpg,png')
-      .then(res => res.json())
+      .then(res => {
+        if(res.ok) {
+          return res.json()
+        } else{
+          throw new Error("Algo salió mal")
+        }
+      })
       .then(result => {
         setData(result)
-      })
+        setLoading(false)
+      }).catch((error) => console.log(error))
   }, [])
 
   return (
     <ImagesContext.Provider value={{
-      data
+      data,
+      isLoading
     }}>
       {props.children}
     </ImagesContext.Provider>

@@ -48,16 +48,15 @@ ProductCard.propTypes = {
     type: PropTypes.string,
     url: PropTypes.string,
     ofert: PropTypes.bool,
-    price: PropTypes.string,
-    newPrice: PropTypes.string,
-    id: PropTypes.string
+    price: PropTypes.number,
+    newPrice: PropTypes.number,
+    id: PropTypes.number
 
   }).isRequired,
-  handleClick: PropTypes.func,
   filter: PropTypes.func,
-  cart: PropTypes.object,
+  cart: PropTypes.array,
   setCart: PropTypes.func,
-  products: PropTypes.object
+  products: PropTypes.array
 }
 
 export default ProductCard
