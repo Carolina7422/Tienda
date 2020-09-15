@@ -22,7 +22,6 @@ const EditImage = ({ createNewProduct }) => {
 const drop = e => {
   
     e.preventDefault()
-    debugger
     const cardId = e.dataTransfer.getData('card_id')
     const card = document.getElementById(cardId)
     const c = canvas.current
@@ -35,20 +34,20 @@ const drop = e => {
     e.preventDefault()
   }
 
-  /*const handleClick = e => {
-    e.preventDefault() 
+  const handleClick = () => {
     const c = canvas.current
     const dataUrl = c.toDataURL('image/png')
-    const cross = dataUrl.crossOrigin="anonymous"
-   setNewProduct({
+   
+    console.log(dataUrl)
+   /*setNewProduct({
       ...newProduct,
       img: dataUrl,
       price:200
     })
   newProduct.id = uuid4()
-    console.log(newProduct)
+    console.log(newProduct)*/
   
-  }*/
+  }
   /*const handleChange = () => {
     const c = canvas.current
     c.crossOrigin = "anonymous";
@@ -73,7 +72,7 @@ const drop = e => {
     width="450px" 
     onDrop={drop}
     onDragOver={dragOver} />
-      <Button>Agregar</Button>
+      <Button onClick={() => handleClick()}>Agregar</Button>
     </Container>
   )
 }
