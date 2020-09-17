@@ -1,6 +1,5 @@
 import React, { createContext, useState } from 'react'
 import data from '../db.json'
-import PropTypes from 'prop-types'
 
 export const MainContext = createContext()
 

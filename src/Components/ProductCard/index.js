@@ -9,10 +9,14 @@ const ProductCard = ({ product, cart, setCart, products }) => {
 
   const handleClick = id => {
     const product = products.filter(prod => prod.id === id)[0]
+    let numItems = cart.reduce((total, itemId) => {
+      return itemId === product ? total += 1 : total
+    }, 0)
     setCart([
       ...cart,
-      product
+      numItems
     ])
+    
   }
 
   const renderOfertPrice = () => {

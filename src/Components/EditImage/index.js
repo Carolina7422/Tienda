@@ -1,11 +1,8 @@
-import React, { useEffect, useRef,useContext } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Canvas , Container, Button } from './styles'
-import { MainContext } from '../../context'
-import { v4 as uuid4 } from 'uuid'
 
-const EditImage = ({ createNewProduct }) => {
+const EditImage = () => {
 
-  const { newProduct, setNewProduct } = useContext(MainContext)
   const canvas = useRef(null)
   useEffect(() => {
     const selectImage = () => {
@@ -39,32 +36,21 @@ const drop = e => {
     const dataUrl = c.toDataURL('image/png')
    
     console.log(dataUrl)
-   /*setNewProduct({
-      ...newProduct,
-      img: dataUrl,
-      price:200
-    })
-  newProduct.id = uuid4()
-    console.log(newProduct)*/
+  
   
   }
-  /*const handleChange = () => {
-    const c = canvas.current
-    c.crossOrigin = "anonymous";
-    const dataUrl = c.toDataURL('image/png');
-    setNewProduct({
-      ...newProduct,
-      img: dataUrl,
-      price:200
-    })
-  }*/
+ 
 
 
   return (
     
     <Container>
     
-      <img id="scream" width="100px" style={{ display: 'none' }} src={require('../../assets/img/playera-canvas.png')} />
+    <img alt ="canvas" 
+    id="scream"
+    width="100px" 
+    style={{ display: 'none' }} 
+    src={require('../../assets/img/playera-canvas.png')} />
     <Canvas 
     id="canvas"
     ref={canvas}
