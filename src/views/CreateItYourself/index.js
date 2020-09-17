@@ -14,13 +14,12 @@ const CreateYourSelft = () => {
   
     <Row>
       <Col xs={24} md={12}>
-        <EditImage id="canvas" />
+        <EditImage />
 
     </Col>
         <Col xs={24} md={12}>
           <Container >
             <Typography.Title level={3} type="secondary">Elige una imagen</Typography.Title>
-            {isLoading && <Spinner/>}
               {
               
                 data.map(e => {
@@ -33,7 +32,7 @@ const CreateYourSelft = () => {
                 )
                 })
               
-              }
+              } 
             </Container>
           </Col>
         </Row>

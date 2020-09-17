@@ -7,10 +7,8 @@ const MainProvider = ({ children }) => {
   const [products, setProduct] = useState(data)
   // shopping cart state
   const [cart, setCart] = useState([])
-  const [newProduct, setNewProduct] = useState({
-    img: "",
-    price: 0
-  }) 
+  const [images, setImages] = useState([])
+
 
 
   return (
@@ -21,8 +19,8 @@ const MainProvider = ({ children }) => {
         cart,
         setCart,
         setProduct,
-        newProduct,
-        setNewProduct
+        images,
+        setImages
       
       }}
     >

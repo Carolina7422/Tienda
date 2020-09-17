@@ -1,15 +1,16 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import { Canvas , Container, Button } from './styles'
-
+import { MainContext } from '../../context'
+import { v4 as uuidv4 } from 'uuidv4'
 const EditImage = () => {
 
+  const { cart, setCart,images, setImages } = useContext(MainContext)
   const canvas = useRef(null)
   useEffect(() => {
     const selectImage = () => {
       const c = canvas.current
       const ctx = c.getContext('2d')
       const img = document.getElementById('scream')
-      img.crossOrigin = "anonymous";
       ctx.drawImage(img, 20, -90)
       ctx.clearRect(0, 0, 50, 50);
     }
@@ -30,16 +31,20 @@ const drop = e => {
   const dragOver = e => {
     e.preventDefault()
   }
-
   const handleClick = () => {
     const c = canvas.current
     const dataUrl = c.toDataURL('image/png')
-   
-    console.log(dataUrl)
-  
+    setImages({
+      url: dataUrl,
+      price: 100
+     })
+    setCart([
+      ...cart,
+        images
+    ])
   
   }
- 
+
 
 
   return (
@@ -58,7 +63,7 @@ const drop = e => {
     width="450px" 
     onDrop={drop}
     onDragOver={dragOver} />
-      <Button onClick={() => handleClick()}>Agregar</Button>
+    <Button onClick={() => handleClick()}>Agregar</Button>
     </Container>
   )
 }

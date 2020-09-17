@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, Fragment } from 'react'
 import { Navbar, PrincipalNavigation, Logo, Container } from './styles'
 import { ShoppingOutlined, DeleteOutlined } from '@ant-design/icons'
 import Items from './items/index'
@@ -9,20 +9,21 @@ import { MainContext } from '../../context'
 import { total } from '../../helpers/'
 
 const HeaderNav = () => {
-  const { cart, setCart } = useContext(MainContext)
+  const { cart, setCart} = useContext(MainContext)
 
   const cartContent = () => {
     return (
       <div>
         {cart.length !== 0
           ? cart.map(e => (
-            <>
-              <Container key={e.id}>
-                <img width="50px" src={e.url} alt="producto añadido"/>
+            <Fragment key={e.id}>
+              <Container>
+                <img width="70px" src={e.url} alt="producto añadido"/>
+                <h4>${!e.ofert ? e.price : e.newPrice}.00</h4>
                 <DeleteOutlined onClick={() => deleteElement(e.id)} style={{ fontSize: 20 }}/>
               </Container>
 
-            </>
+          </Fragment>
           ))
           : <p>Tu carrito esta vacío</p>
         }
@@ -36,6 +37,7 @@ const HeaderNav = () => {
     const newProduct = cart.filter(product => product.id !== id)
     setCart(newProduct)
   }
+
 
   return (
     <Layout>
@@ -53,7 +55,7 @@ const HeaderNav = () => {
             <Menu.Item><Link to="/crealo-tu-mismo">Crealo tu mismo</Link></Menu.Item>
           </Items>
           <Badge count={cart.length}>
-            <Popover placement="bottomLeft" content={cartContent} trigger="click">
+            <Popover placement="bottomLeft" content={() => cartContent()} trigger="click">
               <ShoppingOutlined
                 style={{ fontSize: 30 }} />
             </Popover>
