@@ -5,10 +5,9 @@ import { Content } from './styles'
 import { Layout } from 'antd'
 
 const CupView = () => {
-  const { products, cart, setCart, } = useContext(MainContext)
+  const { products, itemsCart, setItemsCart } = useContext(MainContext)
 
   return (
-    
     <Layout>
       <Content>
         {
@@ -18,10 +17,10 @@ const CupView = () => {
               return (
                 <ProductCard
                   product={product}
-                  cart={cart}
+                  itemsCart={itemsCart}
                   products={products}
                   key={product.id}
-                  setCart={setCart}
+                  setItemsCart={setItemsCart}
                 />
               )
             })
@@ -30,7 +29,7 @@ const CupView = () => {
       </Content>
 
     </Layout>
- 
+
   )
 }
 

@@ -5,23 +5,18 @@ export const MainContext = createContext()
 
 const MainProvider = ({ children }) => {
   const [products, setProduct] = useState(data)
-  // shopping cart state
-  const [cart, setCart] = useState([])
+  const [itemsCart, setItemsCart] = useState([])
   const [images, setImages] = useState([])
 
-
-
   return (
-
     <MainContext.Provider
       value={{
         products,
-        cart,
-        setCart,
+        itemsCart,
+        setItemsCart,
         setProduct,
         images,
         setImages
-      
       }}
     >
       {children}
@@ -29,7 +24,5 @@ const MainProvider = ({ children }) => {
     </MainContext.Provider>
   )
 }
-
-
 
 export default MainProvider

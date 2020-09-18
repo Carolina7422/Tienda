@@ -5,7 +5,7 @@ import { Layout } from 'antd'
 import { MainContext } from '../../context'
 
 const TshirtView = () => {
-  const { products, cart, setCart } = useContext(MainContext)
+  const { products, itemsCart, setItemsCart } = useContext(MainContext)
 
   return (
     <Layout>
@@ -17,10 +17,10 @@ const TshirtView = () => {
               return (
                 <ProductCard
                   product={tshirt}
-                  cart={cart}
+                  itemsCart={itemsCart}
                   products={products}
                   key={tshirt.id}
-                  setCart={setCart}
+                  setItemsCart={setItemsCart}
                 />
               )
             })

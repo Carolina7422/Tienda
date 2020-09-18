@@ -19,6 +19,9 @@ export const colors = (type) => {
 }
 
 export const total = (obj) => {
-  const getArrayPrice = obj.map(price => price.ofert ? price.newPrice : price.price)
-  return getArrayPrice.reduce((total, amount) => total + amount)
+  let total = 0
+  obj.forEach(price => {
+    total += price.ofert ? price.newPrice : price.price
+  })
+  return total
 }

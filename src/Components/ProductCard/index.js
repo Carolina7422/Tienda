@@ -4,16 +4,15 @@ import { colors } from '../../helpers'
 import PropTypes from 'prop-types'
 
 // cambiar agregarProducto por handleClick
-const ProductCard = ({ product, cart, setCart, products }) => {
+const ProductCard = ({ product, itemsCart, setItemsCart, products }) => {
   const { type, url, price, newPrice, ofert, id } = product
 
   const handleClick = id => {
     const product = products.filter(prod => prod.id === id)[0]
-    setCart([
-      ...cart,
-    product
+    setItemsCart([
+      ...itemsCart,
+      product
     ])
-    
   }
 
   const renderOfertPrice = () => {
@@ -38,9 +37,7 @@ const ProductCard = ({ product, cart, setCart, products }) => {
       {
         !ofert ? <Price color="black">${price}.00</Price> : renderOfertPrice()
       }
-
       <Button onClick={() => handleClick(id)}>Agregar al carrito</Button>
-
     </Container>
   )
 }
@@ -55,8 +52,8 @@ ProductCard.propTypes = {
 
   }).isRequired,
   filter: PropTypes.func,
-  cart: PropTypes.array,
-  setCart: PropTypes.func,
+  itemsCart: PropTypes.array,
+  setItemsCart: PropTypes.func,
   products: PropTypes.array
 }
 

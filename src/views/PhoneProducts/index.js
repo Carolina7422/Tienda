@@ -5,7 +5,7 @@ import { Content } from './styles'
 import { Layout } from 'antd'
 
 const Phone = () => {
-  const { products, cart, setCart } = useContext(MainContext)
+  const { products, itemsCart, setItemsCart } = useContext(MainContext)
 
   return (
     <Layout>
@@ -17,10 +17,10 @@ const Phone = () => {
               return (
                 <ProductCard
                   product={phone}
-                  cart={cart}
+                  itemsCart={itemsCart}
                   products={products}
                   key={phone.id}
-                  setCart={setCart}
+                  setItemsCart={setItemsCart}
                 />
               )
             })
