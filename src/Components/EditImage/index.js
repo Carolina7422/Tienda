@@ -3,7 +3,7 @@ import { Canvas, Container, Button, Img } from './styles'
 import { MainContext } from '../../context'
 import { v4 as uuidv4 } from 'uuidv4'
 const EditImage = () => {
-  const { cart, setCart, images, setImages } = useContext(MainContext)
+  const { itemsCart, setItemsCart,images, setImages } = useContext(MainContext)
   const canvas = useRef(null)
   useEffect(() => {
     const selectImage = () => {
@@ -36,8 +36,8 @@ const EditImage = () => {
       url: dataUrl,
       price: 100
     })
-    setCart([
-      ...cart,
+    setItemsCart([
+      ...itemsCart,
       images
     ])
   }
